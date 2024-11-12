@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_shop/common/color_extension.dart';
+import '../../common_widget/line_text_field.dart';
+import '../../common_widget/select_location_view.dart';
 
 class VerificationView extends StatefulWidget {
   const VerificationView({super.key});
@@ -41,6 +43,7 @@ class _VerificationViewState extends State<VerificationView> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: media.width * 0.1),
                     Text(
@@ -49,6 +52,51 @@ class _VerificationViewState extends State<VerificationView> {
                           color: TColor.primaryText,
                           fontSize: 26,
                           fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(height: 15),
+                    LineTextField(
+                        title: 'Code',
+                        placeholder: '- - - -',
+                        controller: txtOTP),
+                    SizedBox(height: media.width * 0.3),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Resend code",
+                            style: TextStyle(
+                                color: TColor.primaryText,
+                                fontSize: 26,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        InkWell(
+                          borderRadius: BorderRadius.circular(30),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SelectLocationView()));
+                          },
+                          child: Container(
+                            width: 60,
+                            height: 60,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: TColor.primary,
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: Image.asset(
+                              "assets/img/next.png",
+                              height: 20,
+                              width: 20,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

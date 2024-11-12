@@ -18,14 +18,14 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void fireOpenApp() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     startApp();
   }
 
   void startApp() {
     Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => WelcomeView()),
+        MaterialPageRoute(builder: (context) => const WelcomeView()),
         (route) => false);
   }
 

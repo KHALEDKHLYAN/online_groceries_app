@@ -69,7 +69,7 @@ class _SignInViewState extends State<SignInView> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Padding(
@@ -96,7 +96,7 @@ class _SignInViewState extends State<SignInView> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(right: 8),
+                                    margin: const EdgeInsets.only(right: 8),
                                     width: 35,
                                     height: 35,
                                     child: countryCode.flagImage(),
@@ -108,7 +108,7 @@ class _SignInViewState extends State<SignInView> {
                                         fontSize: 18,
                                         fontWeight: FontWeight.w600),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                 ],
@@ -121,15 +121,15 @@ class _SignInViewState extends State<SignInView> {
                               color: TColor.placeholder, fontSize: 17),
                         ),
                       ),
+                      Container(
+                        width: double.maxFinite,
+                        height: 1,
+                        color: const Color(0xffE2E2E2),
+                      ),
                     ],
                   ),
                 ),
-                Container(
-                  width: double.maxFinite,
-                  height: 1,
-                  color: Color(0xffE2E2E2),
-                ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Text(
@@ -147,7 +147,7 @@ class _SignInViewState extends State<SignInView> {
                   child: RoundIconButton(
                     title: "Continue with Google",
                     icon: "assets/img/google_logo.png",
-                    bgColor: Color(0xff5383EC),
+                    bgColor: const Color(0xff5383EC),
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -164,7 +164,7 @@ class _SignInViewState extends State<SignInView> {
                   child: RoundIconButton(
                     title: "Continue with Facebook",
                     icon: "assets/img/fb_logo.png",
-                    bgColor: Color(0xff4A66AC),
+                    bgColor: const Color(0xff4A66AC),
                     onPressed: () {},
                   ),
                 ),

@@ -75,7 +75,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                   child: RoundButton(
                     title: "Get Started",
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  SignInView() ) );
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  const SignInView() ) );
                     },
                   ),
                 ),

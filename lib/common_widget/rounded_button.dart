@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
 import '../common/color_extension.dart';
 
 class RoundButton extends StatelessWidget {
   final String title;
   final Color? bgColor;
   final VoidCallback onPressed;
-  const RoundButton({super.key, required this.title, this.bgColor , required this.onPressed});
+  const RoundButton(
+      {super.key, required this.title, this.bgColor, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +49,21 @@ class RoundIconButton extends StatelessWidget {
       color: bgColor,
       child: Row(
         children: [
-          
-          Image.asset(icon, width: 20, height: 20 ,  fit: BoxFit.contain, ),
-
-          const SizedBox(width: 30,),
-          
+          Image.asset(
+            icon,
+            width: 20,
+            height: 20,
+            fit: BoxFit.contain,
+          ),
+          const SizedBox(
+            width: 30,
+          ),
           Text(
             title,
             style: const TextStyle(
                 color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
           ),
+          
         ],
       ),
     );
