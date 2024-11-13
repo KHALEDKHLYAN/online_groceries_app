@@ -5,6 +5,8 @@ import 'package:groceries_shop/common_widget/line_text_field.dart';
 import 'package:groceries_shop/common_widget/rounded_button.dart';
 import 'package:groceries_shop/view/login/sign_up_view.dart';
 
+import '../main_tab_view/main_tab_view.dart';
+
 class LogInView extends StatefulWidget {
   const LogInView({super.key});
 
@@ -136,14 +138,16 @@ class _LogInViewState extends State<LogInView> {
                     ),
                     RoundButton(
                       title: 'Log In',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const MainTabView()));
+                      },
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextButton(
                             onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpView()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUpView()));
                             },
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
